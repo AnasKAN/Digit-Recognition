@@ -1,0 +1,30 @@
+To run this project, you have 3 options:
+1-simply use the already trained model mnist.h5
+#the other 2 options if you want to train the model yourself...
+
+2-using cloud servies (e.g. google colab), unfortunatelly the win32gui library only works for windows.
+3-locally, to run it locally you need to set up an enviroment for tensorflow.
+
+(Requirements):
+1-a GPU that is CUDA 8.0 and above.
+2-or use cpu tensorflow. see instructions on https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow_cpu-2.11.0-cp39-cp39-win_amd64.whl for python 3.9
+for more information visit https://www.tensorflow.org/install/pip
+
+Follow the steps:-
+1-download anaconda or miniconda
+2-open anaconda prompt
+3-create an enviroment and name it whatever you want,
+  conda create -n <name> tensorflow
+4-activate the enviroment,
+  conda activate <name>
+5-set up the GPU (make sure you already installed the gpu's drivers),
+  conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+6-inside the enviroment use pip to install the tensorflow library (note: for windows native the last supported version is 2.10),
+  pip install "tensorflow<2.11" 
+Extras:
+to verify you've downloaded it use,
+  python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+to verify the gpu set up use,
+  python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+  
+*NOTE: tensorflow on windows & linux support CUDA version 10.0, please read the instructions in https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/
