@@ -6,7 +6,7 @@ To run this project, you have 3 options:
 3-locally, to run it locally you need to set up an enviroment for tensorflow.
 
 (Requirements):
-1-a GPU that is CUDA 8.0 and above.
+1-a GPU that is CUDA 8.0 or above.
 2-or use cpu tensorflow. see instructions on https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow_cpu-2.11.0-cp39-cp39-win_amd64.whl for python 3.9
 for more information visit https://www.tensorflow.org/install/pip
 
